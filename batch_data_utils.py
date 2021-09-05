@@ -52,8 +52,8 @@ def fix_missing_period(line):
 def get_article_labels(sent_file):
     with open(sent_file, 'r') as sentFile:
         sents = sentFile.readlines()
-    # with open(sent_file[:-len('.story.txt')] + '.windowed_summarunner_scores.txt', 'r') as labelFile:
-    with open(sent_file[:-len('.story.txt')] + '.summarunner_scores.txt', 'r') as labelFile:
+    with open(sent_file[:-len('.story.txt')] + '.windowed_summarunner_scores.txt', 'r') as labelFile:
+    #with open(sent_file[:-len('.story.txt')] + '.summarunner_scores.txt', 'r') as labelFile:
         labels = labelFile.readlines()
         labels = [int(label) for label in labels]
     return sents, labels
